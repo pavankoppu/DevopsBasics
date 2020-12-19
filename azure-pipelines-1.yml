@@ -24,3 +24,9 @@ steps:
   inputs:
     containerRegistry: 'dockpavan'
     command: 'login'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'dockpavan'
+    repository: 'pavankumarkoppu / azuredevopstests'
+    command: 'buildAndPush'
+    Dockerfile: '**/AzureDockerfile'
